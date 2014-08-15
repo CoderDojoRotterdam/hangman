@@ -1,96 +1,151 @@
 $(document).ready(function(){
 
-  var stage     = new PIXI.Stage(0xFFFFFF),
-      renderer  = PIXI.autoDetectRenderer(500, 500),
-      graphics  = new PIXI.Graphics();
-
-  stage.addChild(graphics);
-
-  document.body.appendChild(renderer.view);
-
-  function stap1(){
-    graphics.lineStyle(10, 0x000000, 1);
-    graphics.moveTo(0, 400);
-    graphics.lineTo(400, 400);
-    
-    render();
-  }
-
-  function stap2(){
-    graphics.lineStyle(10, 0x000000, 1);
-    graphics.moveTo(80, 395);
-    graphics.lineTo(80, 0);
-    render();
-  }
-  
-  function stap3(){
-    graphics.lineStyle(10, 0x000000, 1);
-    graphics.moveTo(80, 5);
-    graphics.lineTo(250, 5);
-    render();
-  }
-
-  function stap4(){
-    graphics.lineStyle(5, 0x000000, 1);
-    graphics.moveTo(80, 100);
-    graphics.lineTo(170 , 5);
-    render();
-  }
-
-  function stap5(){
-    graphics.lineStyle(5, 0x000000, 1);
-    graphics.moveTo(240, 5);
-    graphics.lineTo(240, 50);
-    render();
-  }
-
-  function stap6(){
-    graphics.lineStyle(5, 0x000000, 1);
-    graphics.drawCircle(240, 75, 25);
-    render();
-  }
-
-  function stap7(){
-    graphics.lineStyle(5, 0x000000, 1);
-    graphics.drawCircle(240, 152, 50);
-    render();
-  }
-
-  function stap8(){
-    graphics.lineStyle(5, 0x000000, 1);
-
-    // Linker arm
-    graphics.moveTo(200,120);
-    graphics.lineTo(150,80);
-
-    // rechter arm
-    graphics.moveTo(280,120);
-    graphics.lineTo(330,80);
-    
-    // rechter been
-    graphics.moveTo(270, 190);
-    graphics.lineTo(300, 300);
-
-    // linker been
-    graphics.moveTo(205, 190);
-    graphics.lineTo(180, 300);
-
-    render();
-  }
-  
-  function render(){
-    renderer.render(stage);
-  }
+  var galg = new Galg();
+  galg.start();
 
   // teken galg
-  stap1();
-  stap2();
-  stap3();
-  stap4();
-  stap5();
-  stap6();
-  stap7();
-  stap8();
 
-
+  // setInterval(function(){
+  //   galg.af();
+  // }, 1000);
 });
+
+(function(){
+  var Galg = function(){
+    // Basis dingen klaarzetten
+    this.stage     = new PIXI.Stage(0xFFFFFF);
+    this.renderer  = PIXI.autoDetectRenderer(500, 500);
+    this.graphics  = new PIXI.Graphics();
+
+    // Hoeveel fouten heeft de speler al gemaakt
+    this.pogingen  = 0;
+
+    // Voeg galg toe op pagina
+    this.stage.addChild(this.graphics);
+    this.render();
+  }
+
+  // Start galgje
+  Galg.prototype.start = function(){
+    document.body.appendChild(this.renderer.view);  
+  }
+
+  Galg.prototype.af = function(){
+    // Tel this.pogingen met 1 op
+    this.pogingen++;
+
+
+    if(this.pogingen == 1){
+      this.stap1();
+    }
+    else if(this.pogingen == 2){
+      this.stap2();
+    }
+    else if(this.pogingen == 3){
+      this.stap3();
+    }
+    else if(this.pogingen == 4){
+      this.stap4();
+    }
+    else if(this.pogingen == 5){
+      this.stap5();
+    }
+    else if(this.pogingen == 6){
+      this.stap6();
+    }
+    else if(this.pogingen == 7){
+      this.stap7();
+    }
+    else if(this.pogingen == 8){
+      this.stap8();
+    }
+  }
+
+  // teken de verschillende onderdelen van de galg
+  Galg.prototype.stap1 = function(){
+    this.graphics.lineStyle(10, 0x000000, 1);
+    this.graphics.moveTo(0, 400);
+    this.graphics.lineTo(400, 400);
+    this.render();
+  }
+
+  Galg.prototype.stap2 = function(){
+    this.graphics.lineStyle(10, 0x000000, 1);
+    this.graphics.moveTo(80, 395);
+    this.graphics.lineTo(80, 0);
+    this.render();
+  }
+  
+  Galg.prototype.stap3 = function(){
+    this.graphics.lineStyle(10, 0x000000, 1);
+    this.graphics.moveTo(80, 5);
+    this.graphics.lineTo(250, 5);
+    this.render();
+  }
+
+  Galg.prototype.stap4 = function(){
+    this.graphics.lineStyle(5, 0x000000, 1);
+    this.graphics.moveTo(80, 100);
+    this.graphics.lineTo(170 , 5);
+    this.render();
+  }
+
+  Galg.prototype.stap5 = function(){
+    this.graphics.lineStyle(5, 0x000000, 1);
+    this.graphics.moveTo(240, 5);
+    this.graphics.lineTo(240, 50);
+    this.render();
+  }
+
+  Galg.prototype.stap6 = function(){
+    this.graphics.lineStyle(5, 0x000000, 1);
+    this.graphics.drawCircle(240, 75, 25);
+    this.render();
+  }
+
+  Galg.prototype.stap7 = function(){
+    this.graphics.lineStyle(5, 0x000000, 1);
+    this.graphics.drawCircle(240, 152, 50);
+    this.render();
+  }
+
+  Galg.prototype.stap8 = function(){
+    this.graphics.lineStyle(5, 0x000000, 1);
+
+    // Linker arm
+    this.graphics.moveTo(200,120);
+    this.graphics.lineTo(150,80);
+
+    // rechter arm
+    this.graphics.moveTo(280,120);
+    this.graphics.lineTo(330,80);
+    
+    // rechter been
+    this.graphics.moveTo(270, 190);
+    this.graphics.lineTo(300, 300);
+
+    // linker been
+    this.graphics.moveTo(205, 190);
+    this.graphics.lineTo(180, 300);
+
+    // helaas, af
+    this.helaas();
+
+    // teken de boel op het scherm
+    this.render();
+  }
+  
+  Galg.prototype.helaas = function(){
+    var helaas = new PIXI.Text("Helaas!", {fill: "red", font: "40px arial"});
+    helaas.x = 175;
+    helaas.y = 320;
+    this.stage.addChild(helaas);
+  }
+
+  Galg.prototype.render = function(){
+    this.renderer.render(this.stage);
+  }
+
+  window.Galg = Galg;
+
+})();
