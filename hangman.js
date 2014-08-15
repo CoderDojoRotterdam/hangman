@@ -1,95 +1,80 @@
 $(document).ready(function(){
 
   var stage     = new PIXI.Stage(0xFFFFFF),
-      renderer  = PIXI.autoDetectRenderer(500, 500);
+      renderer  = PIXI.autoDetectRenderer(500, 500),
+      graphics  = new PIXI.Graphics();
+
+  stage.addChild(graphics);
 
   document.body.appendChild(renderer.view);
 
   function stap1(){
-    var lijn = new PIXI.Graphics();
-
-    lijn.lineStyle(10, 0x000000, 1);
-    lijn.moveTo(0, 400);
-    lijn.lineTo(400, 400);
-    stage.addChild(lijn);
-
+    graphics.lineStyle(10, 0x000000, 1);
+    graphics.moveTo(0, 400);
+    graphics.lineTo(400, 400);
+    
     render();
   }
 
   function stap2(){
-    var lijn = new PIXI.Graphics();
-    lijn.lineStyle(10, 0x000000, 1);
-    lijn.moveTo(80, 395);
-    lijn.lineTo(80, 0);
-    stage.addChild(lijn);
+    graphics.lineStyle(10, 0x000000, 1);
+    graphics.moveTo(80, 395);
+    graphics.lineTo(80, 0);
     render();
   }
   
   function stap3(){
-    var lijn = new PIXI.Graphics();
-    lijn.lineStyle(10, 0x000000, 1);
-    lijn.moveTo(80, 5);
-    lijn.lineTo(250, 5);
-    stage.addChild(lijn);
+    graphics.lineStyle(10, 0x000000, 1);
+    graphics.moveTo(80, 5);
+    graphics.lineTo(250, 5);
     render();
   }
 
   function stap4(){
-    var lijn = new PIXI.Graphics();
-    lijn.lineStyle(5, 0x000000, 1);
-    lijn.moveTo(80, 100);
-    lijn.lineTo(170 , 5);
-    stage.addChild(lijn);
+    graphics.lineStyle(5, 0x000000, 1);
+    graphics.moveTo(80, 100);
+    graphics.lineTo(170 , 5);
     render();
   }
 
   function stap5(){
-    var lijn = new PIXI.Graphics();
-    lijn.lineStyle(5, 0x000000, 1);
-    lijn.moveTo(240, 5);
-    lijn.lineTo(240, 50);
-    stage.addChild(lijn);
+    graphics.lineStyle(5, 0x000000, 1);
+    graphics.moveTo(240, 5);
+    graphics.lineTo(240, 50);
     render();
   }
 
   function stap6(){
-    var lijn = new PIXI.Graphics();
-    lijn.lineStyle(5, 0x000000, 1);
-    lijn.drawCircle(240, 75, 25);
-    stage.addChild(lijn);
+    graphics.lineStyle(5, 0x000000, 1);
+    graphics.drawCircle(240, 75, 25);
     render();
   }
 
   function stap7(){
-    var lijn = new PIXI.Graphics();
-    lijn.lineStyle(5, 0x000000, 1);
-    lijn.drawCircle(240, 152, 50);
-    stage.addChild(lijn);
+    graphics.lineStyle(5, 0x000000, 1);
+    graphics.drawCircle(240, 152, 50);
     render();
   }
 
   function stap8(){
-    var lijn = new PIXI.Graphics();
-    lijn.lineStyle(5, 0x000000, 1);
+    graphics.lineStyle(5, 0x000000, 1);
 
     // Linker arm
-    lijn.moveTo(200,120);
-    lijn.lineTo(150,80);
+    graphics.moveTo(200,120);
+    graphics.lineTo(150,80);
 
     // rechter arm
-    lijn.moveTo(280,120);
-    lijn.lineTo(330,80);
-
+    graphics.moveTo(280,120);
+    graphics.lineTo(330,80);
     
     // rechter been
-    lijn.moveTo(270, 190);
-    lijn.lineTo(300, 300);
+    graphics.moveTo(270, 190);
+    graphics.lineTo(300, 300);
 
     // linker been
-    lijn.moveTo(205, 190);
-    lijn.lineTo(180, 300);
+    graphics.moveTo(205, 190);
+    graphics.lineTo(180, 300);
 
-    stage.addChild(lijn);
     render();
   }
   
