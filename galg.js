@@ -1,14 +1,14 @@
-$(document).ready(function(){
-
-  var galg = new Galg();
-  galg.start();
-
-  // teken galg
-
-  // setInterval(function(){
-  //   galg.af();
-  // }, 1000);
-});
+// In galg.js beschrijven we hoe we met JavaScript de galg gaan tekenen
+// Binnen JavaScript wordt dit ook wel een class of object genoemd.
+// In JavaScript kunnen we tegen objecten praten. Op deze manier kunnen we ze vragen iets te doen.
+// Zo kunnen we bijvoorbeeld roepen: fout! de galg tekent vervolgens een extra stapje van de galg.
+// Iets roepen tegen een object noemen we ook wel het aanroepen van een functie
+// of als je het heel netjes wilt zeggen; een methode.
+// -------------------------------------------------------------------------------------------------
+// galg.js kent de volgende methodes:
+// - galg.fout();     // Wanneer er een letter fout is geraden. De galg tekent een stap verder
+// - galg.helaas();   // wanneer de speler verloren heeft
+// - galg.gelukkig(); // wanneer de speler gewonnen heeft
 
 (function(){
   var Galg = function(){
@@ -22,19 +22,20 @@ $(document).ready(function(){
 
     // Voeg galg toe op pagina
     this.stage.addChild(this.graphics);
+
+    // Teken de galg tot nu toe
     this.render();
+
+    // Voeg de galg toe op de pagina
+    document.getElementById('galg').appendChild(this.renderer.view);  
   }
 
-  // Start galgje
-  Galg.prototype.start = function(){
-    document.body.appendChild(this.renderer.view);  
-  }
-
-  Galg.prototype.af = function(){
+  // Helaas, er is een foutje gemaakt
+  Galg.prototype.fout = function(){
     // Tel this.pogingen met 1 op
     this.pogingen++;
 
-
+    // Teken de juiste stap van de galg
     if(this.pogingen == 1){
       this.stap1();
     }
@@ -128,13 +129,11 @@ $(document).ready(function(){
     this.graphics.moveTo(205, 190);
     this.graphics.lineTo(180, 300);
 
-    // helaas, af
-    this.helaas();
-
     // teken de boel op het scherm
     this.render();
   }
   
+  // Teken het woord "helaas" met rood op het scherm
   Galg.prototype.helaas = function(){
     var helaas = new PIXI.Text("Helaas!", {fill: "red", font: "40px arial"});
     helaas.x = 175;
@@ -142,10 +141,20 @@ $(document).ready(function(){
     this.stage.addChild(helaas);
   }
 
+  // Teken het woord "gelukkig" met groen op het scherm
+  Galg.prototype.gelukkig = function(){
+    var helaas = new PIXI.Text("Gelukkig!", {fill: "green", font: "40px arial"});
+    helaas.x = 175;
+    helaas.y = 320;
+    this.stage.addChild(helaas);
+  }
+
+  // Teken alles wat we nu hebben op het scherm
   Galg.prototype.render = function(){
     this.renderer.render(this.stage);
   }
 
+  // Maak de galg beschikbaar voor gebruik
   window.Galg = Galg;
 
 })();
