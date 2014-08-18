@@ -3,9 +3,28 @@
   <head>
     <script src="jquery.js"></script>
     <script src="pixi.js"></script>
-    <script src="hangman.js"></script>
+    <script src="galg.js"></script>
+    <script src="spel.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
   </head>
   <body>
-    
+
+    <div id="spel">
+
+      <div id="galg">
+        <!-- Hier zal de galg getekend worden -->
+      </div>
+
+      <div id="invoer">
+        <label for="letter">Letter: </label>
+        <input type="text" id="letter">
+        <button id="controleer">Check</button>
+
+        <div id="hints"></div>
+      </div>
+
+      <div id="duwer"></div>
+    </div>
+
   </body>
 </html>
