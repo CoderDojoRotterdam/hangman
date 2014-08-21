@@ -2,7 +2,6 @@ $(document).ready(function(){
 
   /*
      TODO:
-     - Win/verlies logica
      - Code opdelen in duidelijke stukjes
      - Voorzien van duidelijk commentaar
      - REFACTOR!
@@ -21,6 +20,7 @@ $(document).ready(function(){
   woorden.push("muziek");
   woorden.push("coderdojo");
   woorden.push("rotterdam");
+  woorden.push("bitterkoekjesvla");
 
 
   $("#controleer").click(function(){

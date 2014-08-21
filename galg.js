@@ -141,14 +141,6 @@
     this.stage.addChild(helaas);
   }
 
-  // Teken het woord "gelukkig" met groen op het scherm
-  Galg.prototype.gelukkig = function(){
-    var helaas = new PIXI.Text("Gelukkig!", {fill: "green", font: "40px arial"});
-    helaas.x = 175;
-    helaas.y = 320;
-    this.stage.addChild(helaas);
-  }
-
   // Teken alles wat we nu hebben op het scherm
   Galg.prototype.render = function(){
     this.renderer.render(this.stage);
