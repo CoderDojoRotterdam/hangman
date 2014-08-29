@@ -1,47 +1,42 @@
 body{
-  margin:  0px;
-  padding: 0px;
+  margin:     0px;
+  padding:    0px;
 }
 
 #spel{
-  width: 502px;
-  margin: 10px auto 0px auto;
+  width:      502px;
+  margin:     10px auto 0px auto;
 }
 
 #galg{
-  border: 1px solid black;
-}
-
-label{
-  font-size: 40pt;
+  border:     1px solid black;
 }
 
 #letter{
-  font-size: 40pt;
+  font-size:  40pt;
   text-align: center;
-  padding: 10px;
-  width: 70px;
-  height: 70px;
+  width:      381px;
+  height:     70px;
 }
 
-#hints{
-  font-size: 30pt;
+#controleer{
+  width:      110px;
+  height:     76px;
+  background-color: #FFF;
+  vertical-align: bottom;
 }
 
-button{
-  width: 70px;
-  height: 70px;
+#controleer, #letter{
+  border: 2px solid #000;
+  border-radius: 5px;
+  outline: none;
 }
 
-#galg{
-  width: 500px;
-}
-
-#duwer{
-  clear: both;
+#letter:focus, #controleer:focus{
+  background-color: #ededed;
 }
 
 #invoer{
-  padding: 10px;
-  width: 480px;
+  padding-top: 5px;
+  vertical-align: bottom;
 }
