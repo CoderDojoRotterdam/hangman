@@ -26,3 +26,66 @@ Wanneer er op de controleerknop gedrukt wordt
         - Toon de hoera!! tekst
 
 ```
+
+# Te gebruiken functies
+We hebben het zware teken- en rekenwerk alvast voor je gedaan en verstopt in functies. Deze hoef je 'alleen nog maar' in de juiste volgorde uit te voeren. Hieronder een klein overzicht van de functies en wat ze doen.
+
+## kiesWillekeurigWoord();
+`galg.kiesWillekeurigWoord();` kiest een willekeurig woord uit de lijst met woorden, breekt deze op in stukjes en maakt een zelfde hoeveelheid streepjes aan die op het scherm worden getoond.
+
+- Deze functie geeft niets terug.
+- Deze functie verwacht geen parameters.
+
+## laatHintsZien();
+`galg.laatHintsZien();` laat de streepjes op het scherm zien.
+
+- Deze functie geeft niets terug.
+- Deze functie verwacht geen parameters.
+
+## ingevuldeLetter();
+`galg.ingevuldeLetter();` geeft de huidige ingevulde letter terug en maakt het invoerveld leeg.
+
+- Deze functie geeft de huidige ingevulde letter terug.
+- Deze functie verwacht geen parameters.
+
+## zitLetterInWoord(ingevuldeLetter);
+`galg.zitLetterInWoord(ingevuldeLetter)` controleert of de ingevulde letter in het gekozen woord zit.
+
+- Deze functie geeft `true` of `false` terug.
+- Deze functie accepteert een letter als argument.
+
+## onthulLetter(ingevuldeLetter);
+`galg.onthulLetter(ingevuldeLetter);` toont de gegeven letter op de juiste plaats tussen de streepjes.
+
+- Deze functie geeft niets terug.
+- Deze functie accepteerd een letter als argument.
+
+## fout();
+`galg.fout();` brengt de galg een stapje verder door een nieuw lijntje te tekenen.
+
+- Deze functie geeft niets terug.
+- Deze functie verwacht geen parameters.
+
+## spelerIsAf();
+`galg.spelerIsAf()` controleert of de speler af is.
+
+- Deze functie geeft `true` of `false` terug.
+- Deze functie verwacht geen parameters.
+
+## helaas();
+`galg.helaas();` tekent het woord 'helaas' op het scherm om aan te geven dat de speler verloren heeft.
+
+- Deze functie geeft niets terug.
+- Deze functie verwacht geen parameters.
+
+## spelerHeeftGewonnen();
+`galg.spelerHeeftGewonnen()` controleert of de speler gewonnen heeft.
+
+- Deze functie geeft `true` of `false` terug.
+- Deze functie verwacht geen parameters.
+
+## feest();
+`galg.feest();` tekent 'Hoera!!' op het scherm om aan te geven dat de speler gewonnen heeft.
+
+- Deze functie geeft niets terug.
+- Deze functie verwacht geen parameters.
