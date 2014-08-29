@@ -4,14 +4,12 @@ body{
 }
 
 #spel{
-  background-color: orange;
-  width: 1000px;
-  margin: 0 auto;
-  padding: 10px;
+  width: 502px;
+  margin: 10px auto 0px auto;
 }
 
-#galg, #invoer{
-  float: left;
+#galg{
+  border: 1px solid black;
 }
 
 label{
@@ -46,5 +44,4 @@ button{
 #invoer{
   padding: 10px;
   width: 480px;
-  height: 500px;
 }
