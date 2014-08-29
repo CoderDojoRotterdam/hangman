@@ -6,20 +6,21 @@ body{
 
 /*Stijl voor de wrapper div waarin het spel zit*/
 #spel{
-  width:      502px;
+  width:      504px;
   margin:     10px auto 0px auto;
 }
 
 /*Stijl voor de galg div waarin de galg wordt getekend*/
 #galg{
-  border:     1px solid black;
+  border:     2px solid black;
+  border-radius: 5px;
 }
 
 /*Stijl voor het invoerveld onderaan het spel*/
 #letter{
   font-size:  40pt;
   text-align: center;
-  width:      381px;
+  width:      383px;
   height:     70px;
 }
 
