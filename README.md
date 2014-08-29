@@ -1,12 +1,12 @@
 # Galgje
 
-Dit is de uitgewerkte versie van het spel galgje. Om het spel werkend te kunnen bekijken open je index.html in een webbrowser (bijvoorbeeld Google Chrome). Het spel kan vervolgens gespeeld worden met toetsenbord en muis.
+Dit is de uitgewerkte versie van het spel galgje. Om het spel werkend te kunnen bekijken, open je index.html in een webbrowser (bijvoorbeeld Google Chrome). Het spel kan vervolgens gespeeld worden met toetsenbord en muis.
 
 # Technisch
 Het spel is opgebouwd in twee stukken. De meeste logica staat in `galg.js` waarin al het teken- en rekenwerk wordt gedaan. De andere helft staat in `spel.js` waarin de verschillende onderdelen aan elkaar worden geknoopt. Hierin staat de echte spel logica.
 
 # Pseudo code
-De spellogica kan eigenlijk worden beschreven in devolgende stappen:
+De spellogica kan worden beschreven in de volgende stappen:
 
 ```
 Wanneer spel geladen is
