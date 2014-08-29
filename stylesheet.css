@@ -1,17 +1,21 @@
+/*Stijl voor de algehele body tag*/
 body{
   margin:     0px;
   padding:    0px;
 }
 
+/*Stijl voor de wrapper div waarin het spel zit*/
 #spel{
   width:      502px;
   margin:     10px auto 0px auto;
 }
 
+/*Stijl voor de galg div waarin de galg wordt getekend*/
 #galg{
   border:     1px solid black;
 }
 
+/*Stijl voor het invoerveld onderaan het spel*/
 #letter{
   font-size:  40pt;
   text-align: center;
@@ -19,6 +23,7 @@ body{
   height:     70px;
 }
 
+/*Stijl voor de controle knop onderaan het spel*/
 #controleer{
   width:      110px;
   height:     76px;
@@ -26,6 +31,7 @@ body{
   vertical-align: bottom;
 }
 
+/*Gedeelde stijl tussen controleer knop en letter invoer*/
 #controleer, #letter{
   border: 2px solid #000;
   border-radius: 5px;
@@ -36,6 +42,7 @@ body{
   background-color: #ededed;
 }
 
+/*Algemene stijl voor het onderste vlak met invoer & knop */
 #invoer{
   padding-top: 5px;
   vertical-align: bottom;
