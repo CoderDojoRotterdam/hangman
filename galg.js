@@ -29,6 +29,9 @@ var Galg = function(){
   // Hoeveel fouten heeft de speler al gemaakt
   this.pogingen  = 0;
 
+  // Maak een tekstveld voor de hints
+  this.maakHintsTekstVeld();
+
   // Voeg galg toe op pagina
   this.stage.addChild(this.graphics);
 
@@ -176,7 +179,7 @@ Galg.prototype.kiesWillekeurigWoord = function(){
 
   // Voor iedere letter willen we een streepje op het scherm
   for(var letter in this.gekozenWoord){
-    this.gekozenWoordMasker.push("-");
+    this.gekozenWoordMasker.push("_");
   }
 }
 
@@ -189,7 +192,8 @@ Galg.prototype.ingevuldeLetter = function(){
 
 // Toon de streepjes en letters op hun plek
 Galg.prototype.laatHintsZien = function(){
-  $("#hints").text(this.gekozenWoordMasker.join(' '));
+  this.hintsTekstVeld.setText(this.gekozenWoordMasker.join(' '));
+  this.render();
 }
 
 // Controleer of de gegeven letter in het woord voor komt
@@ -217,7 +221,7 @@ Galg.prototype.spelerIsAf = function(){
 
 // Controleer of de speler heeft gewonnen
 Galg.prototype.spelerHeeftGewonnen = function(){
-  return this.gekozenWoordMasker.indexOf("-") === -1
+  return this.gekozenWoordMasker.indexOf("_") === -1
 }
 
 // Hoera! De speler heeft gewonnen
@@ -227,6 +231,13 @@ Galg.prototype.feest = function(){
   hoera.y = 320;
   this.stage.addChild(hoera);
   this.render();
+}
+
+Galg.prototype.maakHintsTekstVeld = function(){
+  this.hintsTekstVeld = new PIXI.Text("" , {fill: "black", font: "35px arial"});
+  this.hintsTekstVeld.x = 10;
+  this.hintsTekstVeld.y = 440;
+  this.stage.addChild(this.hintsTekstVeld);
 }
 
 // Teken alles wat we nu hebben op het scherm
