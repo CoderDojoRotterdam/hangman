@@ -1,5 +1,7 @@
 # Galgje
 
+Live versie: http://coderdojorotterdam.github.io/hangman/
+
 Dit is de uitgewerkte versie van het spel galgje. Om het spel werkend te kunnen bekijken, open je index.html in een webbrowser (bijvoorbeeld Google Chrome). Het spel kan vervolgens gespeeld worden met toetsenbord en muis.
 
 # Technisch
